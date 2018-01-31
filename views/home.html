@@ -1,0 +1,28 @@
+<style>
+    .vertical-center {
+        margin-top: 10%;
+    }
+</style>
+<section id="content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="container">
+                <div class="vertical-center">
+                    <div class="col-xs-12 col-sm-6 col-md-offset-4 col-md-4">
+                        <form class="form-signin">
+                            <div class="form-group">
+                                <label for="inputEmail" class="">User Name</label>
+                                <input type="text" id="inputEmail" class="form-control" placeholder="User Name" ng-model="username" required autofocus>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword" class="">Password</label>
+                                <input type="password" id="inputPassword" class="form-control" placeholder="Password" ng-model="password" required>
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="verifyUserLogin()">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
