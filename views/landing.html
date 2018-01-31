@@ -2,7 +2,48 @@
     <div class="container-fluid">
         <div class="card">
             <div class="container">
-                <h2>Hi, WelCome</h2>  
+                <h2>Hi, WelCome</h2>
+                <div class="panel panel-default">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12 mb-20">
+                            <div class="col-sm-5 col-xs-10">
+                                <h4>Upload File</h4>
+                            </div>
+                            <div class="col-sm-1 col-xs-2">
+                                <!--<a class="cursorptr">
+                                    <i class="glyphicon glyphicon-open fs30" aria-hidden="true" id="openFile"></i>
+                                    </a>-->
+                                <input type="file" ngf-select="uploadList($files, $invalidFiles,'csvFile')" id="csvFile" type="file" name="csvFile" ng-model="csvFile"
+                                    accept="csv/*" ngf-max-size="2MB" required ngf-model-invalid="errorFile" class="displaynone">                                {{csvFileDetails}}
+                            </div>
+                        </div>
+
+                        <div ng-show="isDisplayCertificateUpload">
+
+                            <div class="col-sm-12 col-xs-12 mb-20">
+                                <div class="col-sm-5 col-xs-10">
+                                    <h4>Upload Certificate</h4>
+                                </div>
+                                <!--<div class="col-sm-1 col-xs-2">
+                                <a class="cursorptr"><i class="glyphicon glyphicon-open fs30" aria-hidden="true"></i></a>
+                            </div>-->
+
+                                <div class="col-sm-1 col-xs-2">
+                                    <a class="cursorptr"><i class="glyphicon glyphicon-open fs30" id="openMultipleFile" aria-hidden="true"></i></a>
+                                    <input type="file" ngf-select="uploadDocumentList($files, $invalidFiles)" multiple ngf-max-size="2MB" id="documentFile" type="file" name="csvFile"
+                                        ng-model="csvFile" accept="image/*" required ngf-model-invalid="errorFile" class="displaynone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 text-center">
+                            <!--<a href="javascript:javascript:history.go(-1)" class="btn btn-primary btn-large mt10">Back</a>-->
+                            <!--<button type="submit" class="btn btn-primary btn-large mt10" data-ui-sref="vendorcertcalibration">Save</button>-->
+                            <button ng-show="isDisplayCertificateUpload" type="submit" class="btn btn-primary btn-large mt10" ng-disabled="toDisableSaveBtn" ng-click="saveCSV()">Save</button>
+                        </div>
+
+
+                    </div>
+                </div>  
             </div>
         </div>
     </div>

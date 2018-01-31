@@ -1,4 +1,4 @@
-var myApp = angular.module('SPApp', ['ui.router']);
+var myApp = angular.module('SPApp', ['ui.router', 'ngFileUpload']);
 
 myApp.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/");
