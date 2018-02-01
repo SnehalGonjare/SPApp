@@ -1,8 +1,8 @@
-myApp.controller("homeCtrl", function ($scope,$state) {
+myApp.controller("homeCtrl", function ($scope, $state, $rootScope) {
     $scope.verifyUserLogin = function () {
-        if ($scope.username == "sadmin" && $scope.password == "sadmin") {
+        if ($scope.username == $rootScope.userName && $scope.password == $rootScope.password) {
             $state.go('landing');
-         } else {
+        } else {
             alert('Invalid Credentials');
         }
 
